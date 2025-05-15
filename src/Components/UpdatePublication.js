@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from "./Header";
+import "./UpdatePublication.css";
 
 const UpdatePublication = () => {
   const { id } = useParams();
@@ -39,45 +41,48 @@ const UpdatePublication = () => {
   };
 
   return (
-    <div className="update-container">
-      <h2>Update Publication</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          name="title"
-          value={publication.title}
-          onChange={handleChange}
-          placeholder="Title"
-          required
-        />
-        <input
-          name="year"
-          value={publication.year}
-          onChange={handleChange}
-          placeholder="Year"
-          required
-        />
-        <input
-          name="volume"
-          value={publication.volume}
-          onChange={handleChange}
-          placeholder="Volume"
-          required
-        />
-        <input
-          name="content"
-          value={publication.content}
-          onChange={handleChange}
-          placeholder="Content"
-        />
-        <input
-          name="author"
-          value={publication.author}
-          onChange={handleChange}
-          placeholder="Author"
-        />
-        <button type="submit">Update</button>
-      </form>
-    </div>
+    <>
+      <Header />
+      <div className="update-container">
+        <h2>Update Publication</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            name="title"
+            value={publication.title}
+            onChange={handleChange}
+            placeholder="Title"
+            required
+          />
+          <input
+            name="year"
+            value={publication.year}
+            onChange={handleChange}
+            placeholder="Year"
+            required
+          />
+          <input
+            name="volume"
+            value={publication.volume}
+            onChange={handleChange}
+            placeholder="Volume"
+            required
+          />
+          <input
+            name="content"
+            value={publication.content}
+            onChange={handleChange}
+            placeholder="Content"
+          />
+          <input
+            name="author"
+            value={publication.author}
+            onChange={handleChange}
+            placeholder="Author"
+          />
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </>
   );
 };
 

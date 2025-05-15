@@ -1,0 +1,76 @@
+form input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 14px;
+    margin: 0 auto 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Include padding/border in width */
+    display: block;
+}
+.update-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 14px;
+    margin: 0 auto 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    display: block;
+}
+
+form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button[type="submit"] {
+    max-width: 350px;
+    /* Same max-width as inputs */
+    width: 100%;
+    /* Fill max-width */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    /* Make sure it behaves like a block */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 600px) {
+    .update-container {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    form input,
+    button[type="submit"] {
+        font-size: 14px;
+    }
+}

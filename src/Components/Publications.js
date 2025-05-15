@@ -92,7 +92,7 @@ const Publications = () => {
                 <th>Title</th>
                 <th>Year</th>
                 <th>Volume</th>
-                <th>Content</th>
+                {/* <th>Content</th> */}
                 <th>PDF</th>
                 <th>Actions</th>
               </tr>
@@ -104,7 +104,7 @@ const Publications = () => {
                   <td>{publication.title || "N/A"}</td>
                   <td>{publication.year || "N/A"}</td>
                   <td>{publication.volume || "N/A"}</td>
-                  <td>{publication.content || "N/A"}</td>
+                  {/* <td>{publication.content || "N/A"}</td> */}
                   <td>
                     <button onClick={() => fetchPdf(publication._id)}>
                       View PDF
