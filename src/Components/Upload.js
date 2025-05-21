@@ -77,14 +77,14 @@ const Upload = () => {
       console.log("pdf", pdfFile);
 
       const response = await axios.post(
-        // "https://eeman.in:15002/publications",
-        "http://localhost:5000/publications",
-        data
-        // {
-        //   headers: {
-        //     "Content-Type": "multipart/form-data",
-        //   },
-        // }
+        "https://eeman.in:15002/publications",
+
+        data,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
       );
 
       console.log("Publication submitted:", response.data);
